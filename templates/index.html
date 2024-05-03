@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Generator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/cat-logo.png" type="image/png">
-    <script src="index.js" type="module"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/assets/cat-logo.png" type="image/png">
+    <script src="/static/index.js" type="module"></script>
 </head>
 <body>
     <h1>Cat Image Generator</h1>
     <div id="result">
-        <img id="cat-image" src="assets/cat_placeholder.jpg" alt="Placeholder">
+        <img id="cat-image" src="/static/assets/cat_placeholder.jpg" alt="Placeholder">
+        <div id="loading-indicator" style="display: none;">
+            <img src="/static/assets/loading-cat.gif" alt="Loading..."/>
+        </div>
     </div>
     <form id="imageForm">
-        <!-- <label for="theme">Theme:</label>
-        <input type="text" id="theme" name="theme"><br>
+        <label for="theme">Breed:</label>
+        <input type="text" id="breed" name="breed"><br>
 
-        <label for="color">Color Scheme:</label>
+        <label for="color">Color:</label>
         <input type="text" id="color" name="color"><br>
 
-        <label for="style">Art Style:</label>
+        <!-- <label for="style">Art Style:</label>
         <select id="style" name="style">
             <option value="realistic">Realistic</option>
             <option value="cartoon">Cartoon</option>
